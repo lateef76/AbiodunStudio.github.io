@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abiodun Studio · Home</title>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- ========== VIDEO BACKGROUND ========== -->
+    <div class="video-background">
+        <video id="homeVideo" autoplay muted loop playsinline poster="backgroun.mp4">
+            <source src="backgroun.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <!-- ========== IMAGE MODAL ========== -->
+    <div class="image-modal" id="imageModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">×</button>
+            <button class="modal-prev" id="modalPrev">‹</button>
+            <button class="modal-next" id="modalNext">›</button>
+            <div class="modal-content">
+                <img src="" alt="Modal view" class="modal-image" id="modalImage">
+                <div class="modal-info">
+                    <span class="modal-title" id="modalTitle"></span>
+                    <span class="modal-category" id="modalCategory"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="abiodun-nav">
+        <div class="nav-container">
+            <a href="index.html" class="abiodun-logo">
+                <div class="logo-mark">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24" cy="24" r="23" stroke="#B8A07C" stroke-width="2"/>
+                        <path d="M15 31L24 15L33 31H15Z" stroke="#B8A07C" stroke-width="2" fill="none"/>
+                        <circle cx="24" cy="24" r="6" fill="#B8A07C"/>
+                    </svg>
+                </div>
+                <div class="logo-type">
+                    <span class="logo-line1">ABIODUN</span>
+                    <span class="logo-line2">STUDIO</span>
+                </div>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="archive.html">Archive</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="nav-availability">
+                <span class="availability-dot"></span>
+                <span class="availability-text">Available for work</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== REDESIGNED HERO SECTION ========== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text-content">
+                    <div class="hero-greeting">
+                        <span class="greeting-line"></span>
+                        <span class="greeting-text">ABIODUN STUDIO</span>
+                    </div>
+                    
+                    <h1 class="hero-headline">
+                        <span class="headline-row">Visual</span>
+                        <span class="headline-row accent">Storyteller</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        I create designs and videos that don't just look good — 
+                        <span class="highlight">they feel like something.</span>
+                    </p>
+                    
+                    <div class="hero-services">
+                        <span class="service-tag">Graphic Design</span>
+                        <span class="service-tag">Video Editing</span>
+                        <span class="service-tag">Post-Production</span>
+                        <span class="service-tag">Creative Direction</span>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <a href="projects.html" class="btn-primary">
+                            <span>View Portfolio</span>
+                            <svg class="btn-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10H16M16 10L12 6M16 10L12 14" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </a>
+                        <a href="contact.html" class="btn-outline">Start Project</a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Years</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Clients</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="floating-elements">
+                        <div class="float-icon icon-1">✧</div>
+                        <div class="float-icon icon-2">●</div>
+                        <div class="float-icon icon-3">◆</div>
+                        <div class="float-icon icon-4">▶</div>
+                    </div>
+                    <div class="hero-quote-card">
+                        <p>"Design is memory. I make it last."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span class="scroll-text">EXPLORE</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ========== PHILOSOPHY SECTION ========== -->
+    <section class="philosophy">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">—— 01. PHILOSOPHY</span>
+                <h2 class="section-headline">Why I do what I do</h2>
+            </div>
+            
+            <div class="philosophy-grid">
+                <div class="philosophy-text">
+                    <p class="philosophy-intro">I believe great design comes from understanding people—their stories, their emotions, their dreams.</p>
+                    
+                    <div class="philosophy-quote">
+                        <span class="quote-mark">"</span>
+                        <p>Every project is a conversation. I listen first, then I create.</p>
+                    </div>
+                    
+                    <p class="philosophy-body">Whether it's a club flyer, a film poster, or a commercial edit, my goal is always the same: to create work that lingers in the heart. No trends — just timeless visuals that connect.</p>
+                    
+                    <div class="philosophy-signature">
+                        <span class="signature-name">— Abiodun</span>
+                        <span class="signature-title">Founder, Creative Director</span>
+                    </div>
+                </div>
+                
+                <div class="philosophy-image-wrapper">
+                    <div class="philosophy-image" 
+                         data-src="potrait.jpg"
+                         data-title="Abiodun in Studio"
+                         data-category="Accra · 2025">
+                        <img src="potrait.jpg" 
+                             alt="Abiodun Studio" 
+                             class="clickable-image"
+                             loading="lazy">
+                        <div class="image-caption">Accra, 2025</div>
+                    </div>
+                    <div class="image-accent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FEATURED WORK ========== -->
+    <section class="featured">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">—— 02. FEATURED WORK</span>
+                <h2 class="section-headline">Recent <span class="headline-italics">projects</span></h2>
+            </div>
+            
+            <div class="featured-grid">
+                <!-- PROJECT 1 -->
+                <div class="featured-card" 
+                     data-src="BBQ Cookout Party Flyer Template.jpg"
+                     data-title="BBQ Cookout Party Flyer"
+                     data-category="Food · 2024">
+                    <div class="card-image-wrapper">
+                        <img src="BBQ Cookout Party Flyer Template.jpg" 
+                             alt="BBQ Cookout Party Flyer" 
+                             class="clickable-image"
+                             loading="lazy">
+                        <div class="card-number">01</div>
+                        <div class="card-overlay">
+                            <span>View Project</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>BBQ Cookout</h3>
+                        <p>Party Flyer Design</p>
+                        <div class="card-tags">
+                            <span>food</span>
+                            <span>event</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PROJECT 2 -->
+                <div class="featured-card"
+                     data-src="Sushi Bar Menu.jpg"
+                     data-title="Sushi Bar Menu"
+                     data-category="Food · 2024">
+                    <div class="card-image-wrapper">
+                        <img src="Sushi Bar Menu.jpg" 
+                             alt="Sushi Bar Menu" 
+                             class="clickable-image"
+                             loading="lazy">
+                        <div class="card-number">02</div>
+                        <div class="card-overlay">
+                            <span>View Project</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Sushi Bar</h3>
+                        <p>Menu Design</p>
+                        <div class="card-tags">
+                            <span>menu</span>
+                            <span>typography</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PROJECT 3 -->
+                <div class="featured-card"
+                     data-src="Pizza Flyer Template.jpg"
+                     data-title="Pizza Flyer"
+                     data-category="Food · 2025">
+                    <div class="card-image-wrapper">
+                        <img src="Pizza Flyer Template.jpg" 
+                             alt="Pizza Flyer" 
+                             class="clickable-image"
+                             loading="lazy">
+                        <div class="card-number">03</div>
+                        <div class="card-overlay">
+                            <span>View Project</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Pizza Promo</h3>
+                        <p>Flyer Template</p>
+                        <div class="card-tags">
+                            <span>food</span>
+                            <span>promo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="featured-footer">
+                <a href="projects.html" class="btn-outline">View All Projects →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-subtitle">—— 03. TESTIMONIALS</span>
+                <h2 class="section-headline">What clients <span class="headline-italics">say</span></h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-icon">"</div>
+                    <p>Abiodun doesn't just design — he listens, interprets, and delivers beyond expectations.</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah K.</strong>
+                        <span>Creative Director</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card featured">
+                    <div class="testimonial-icon">"</div>
+                    <p>The video edit captured exactly the emotion we wanted. Pure talent and professionalism.</p>
+                    <div class="testimonial-author">
+                        <strong>Michael O.</strong>
+                        <span>Noise Collective</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-icon">"</div>
+                    <p>His poster became the iconic image of our entire festival. Couldn't have asked for more.</p>
+                    <div class="testimonial-author">
+                        <strong>Elena R.</strong>
+                        <span>Film Curator</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to create something <span class="title-italics">unforgettable</span>?</h2>
+                <p class="cta-text">Let's bring your vision to life with timeless design and emotion.</p>
+                <a href="contact.html" class="btn-primary cta-button">
+                    <span>Start the Conversation</span>
+                    <svg class="btn-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 10H16M16 10L12 6M16 10L12 14" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="abiodun-logo.png" alt="Abiodun Studio Logo" class="footer-logo-image">
+                        <span>ABIODUN STUDIO</span>
+                    </div>
+                    <p>Visual storytelling · Design · Motion</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="archive.html">Archive</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li>Graphic Design</li>
+                            <li>Video Editing</li>
+                            <li>Post-Production</li>
+                            <li>Creative Direction</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="mailto:lateefabiodun76@gmail.com">hello@abiodun.studio</a></li>
+                            <li>Ghana · Accra · Remote</li>
+                            <li>IG · BE · VI · LI</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <span>© 2025 Abiodun Studio. All rights reserved.</span>
+                <span class="footer-philosophy">design is memory</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

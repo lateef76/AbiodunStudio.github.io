@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abiodun Studio · Contact</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <!-- ========== VIDEO BACKGROUND - CONTACT PAGE ========== -->
+    <div class="video-background">
+        <video id="contactVideo" autoplay muted loop playsinline poster="https://images.pexels.com/photos/1964479/pexels-photo-1964479.jpeg">
+            <source src="home.mp4" type="video/mp4">
+            <source src="home.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="abiodun-nav">
+        <div class="nav-container">
+            <a href="index.html" class="abiodun-logo">
+                <div class="logo-mark">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24" cy="24" r="23" stroke="#B8A07C" stroke-width="2"/>
+                        <path d="M15 31L24 15L33 31H15Z" stroke="#B8A07C" stroke-width="2" fill="none"/>
+                        <circle cx="24" cy="24" r="6" fill="#B8A07C"/>
+                    </svg>
+                </div>
+                <div class="logo-type">
+                    <span class="logo-line1">ABIODUN</span>
+                    <span class="logo-line2">STUDIO</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="archive.html">Archive</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="nav-availability">
+                <span class="availability-dot"></span>
+                <span class="availability-text">Available for work</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="hero-subtitle">—— 05. CONNECT</div>
+            <h1 class="hero-title">
+                <span class="title-line">START YOUR</span>
+                <span class="title-line accent">LEGACY</span>
+            </h1>
+        </div>
+    </section>
+
+    <!-- CONTACT GRID -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Let's create something unforgettable.</h2>
+                    <div class="divider"></div>
+                    <p>Whether you need a flyer, poster, video edit, or full visual identity — I approach every project with emotional precision and timeless aesthetics.</p>
+                    
+                    <div class="info-details">
+                        <div class="info-item">
+                            <span class="label">Email</span>
+                            <span class="value">
+                                <a href="mailto:lateefabiodun76@gmail.com" style="color: var(--color-gold); text-decoration: none;">
+                                    lateefabiodun76@gmail.com
+                                </a>
+                            </span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Location</span>
+                            <span class="value">Lagos · London · Remote</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Response</span>
+                            <span class="value">within 24 hours</span>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#">Instagram</a>
+                        <a href="#">Behance</a>
+                        <a href="#">Vimeo</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <!-- Formspree Form - Secured with HTTPS and proper attributes -->
+                    <form
+                        id="contactForm"
+                        action="https://formspree.io/f/mnjbpkwb"
+                        method="POST"
+                        novalidate
+                    >
+                        <!-- Honeypot field to prevent spam (hidden from users) -->
+                        <input type="text" name="_gotcha" style="display:none !important">
+                        
+                        <!-- Redirect after submission (optional) -->
+                        <input type="hidden" name="_redirect" value="https://abiodun.studio/thank-you">
+                        
+                        <!-- Subject line for emails -->
+                        <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
+                        
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="project">Project Type</label>
+                            <select id="project" name="project" required>
+                                <option value="" disabled selected>Select project type</option>
+                                <option value="Flyer/Poster">Flyer/Poster</option>
+                                <option value="Video Edit">Video Edit</option>
+                                <option value="Brand Identity">Brand Identity</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">Send Message →</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="23" stroke="#B8A07C" stroke-width="2"/>
+                            <path d="M15 31L24 15L33 31H15Z" stroke="#B8A07C" stroke-width="2" fill="none"/>
+                            <circle cx="24" cy="24" r="6" fill="#B8A07C"/>
+                        </svg>
+                        <span>ABIODUN STUDIO</span>
+                    </div>
+                    <p>Visual storytelling · Design · Motion</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="archive.html">Archive</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li>Graphic Design</li>
+                            <li>Video Editing</li>
+                            <li>Post-Production</li>
+                            <li>Creative Direction</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="mailto:lateefabiodun76@gmail.com">lateefabiodun76@gmail.com</a></li>
+                            <li>Lagos · London · Remote</li>
+                            <li>IG · BE · VI · LI</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 Abiodun Studio</span>
+                <span class="footer-philosophy">design is memory</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
